@@ -25,7 +25,7 @@ os.environ['OPENAI_API_KEY'] = 'sk-proj-key'
 class TemplateAgent:
     def __init__(self, ):
 
-
+        chromadb.api.client.SharedSystemClient.clear_system_cache()
         self.embeddings = OpenAIEmbeddings()
         self.memory_buffer = ConversationBufferMemory(return_messages=True)
         self.llm = ChatOpenAI(model = 'o1-mini')
@@ -43,14 +43,16 @@ class TemplateAgent:
         if context == "init":
             template += """You are an AI psychological assessor. You have access to the following research {context}. On invocation, do the following:
 
-                            1. Retrieve relevant psychology articles/papers on emotional‑state assessment and question design.
-                            2. Formulate three open‑ended, empathetic questions aimed at uncovering the user’s current emotions.
+                            1. Retrieve relevant psychology articles/papers on emotional‑state assessment and question design from the context.
+                            2. Formulate three open‑ended, empathetic questions aimed at uncovering the user’s current emotions and intent.
+                            3. The questions should not feel repeated and should be somewhat unique.
                             
                             Keep the retrieved information to yourself, and dont print out the papers you got. Just use it to inform yourself.
                         """
         else:
             template += """{question} \n Given this response and the research {context}, analyze them using established psychological frameworks (e.g., appraisal theory, affective circumplex) and the given research.
-                            Summarize and show the user’s emotional state in 2 sentences and include a 1–2 sentence rationale grounded in the user’s answers."""
+                            Summarize and show the user’s emotional state in 2 sentences and include a 1–2 sentence rationale grounded in the user’s answers.
+                            Create an empathetic response for the user."""
         # print(template)
 
         prompt = ChatPromptTemplate.from_template(template)

@@ -5,6 +5,9 @@
 This is our final project source code for CS5170 Spring 2025 under Professor Stacey Marsella. This project explores an AI-driven system for generating immersive and personalized audio-visual experiences by detecting user emotions and intent in real time.
 
 ## Notes
+
+### Touch Designer files are above the limit of 100M on github therefore are hosted at [this link](https://drive.google.com/drive/folders/10F8p6IGKb4LrwuBaPldexfLIcjgDjU2L?usp=sharing)
+
 This repository acts a dump just to show source code. Because of that, The conda environment setup, the paths defined and other specifics of setting up pipelines in TouchDesigner are not defined. Thus you may not be able to reproduce the results. We will add a step-by-step guide to this readme later on. 
 
 LLM api keys are also required by the user to be input.

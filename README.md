@@ -12,8 +12,8 @@ This repository acts a dump just to show source code. Because of that, The conda
 
 LLM api keys are also required by the user to be input.
 
-- **Streamlit UI**: This is the UI for our project which is built using Streamlit Framework. Currently the paths are not setup correctly on github and the system needs MusicGen model from Meta needs to be downloaded and setup locally so work properly. Work upon this to add proper instructions on how to setup is still going on.
-- **TouchDesiner**: TouchDesigner is a node-based visual programming platform designed for real-time, interactive multimedia development. It enables rapid prototyping and deployment of audio-visual experiences by chaining modular operators in a dataflow graph. Some modules have been setup in their default paths which need to be setup. Before running this part of the system, Stable diffusion model needs to we downloaded and setup locally. Work upon this to add proper instructions on how to setup is still going on.
+- **Streamlit UI**: This is the UI for our project which is built using Streamlit Framework. Currently the paths are not setup correctly on github and the system needs MusicGen model from Meta to be downloaded and setup locally to work properly. Work upon this to add proper instructions on how to setup is still going on.
+- **TouchDesiner**: TouchDesigner is a node-based visual programming platform designed for real-time, interactive multimedia development. It enables rapid prototyping and deployment of audio-visual experiences by chaining modular operators in a dataflow graph. Some modules have been setup in their default paths which need to be worked on. Before running this part of the system, Stable diffusion model also needs to be downloaded and setup locally. Work upon this to add proper instructions on how to setup is still going on.
 
 ## Demos
 
